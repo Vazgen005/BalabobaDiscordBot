@@ -7,12 +7,6 @@ namespace BalabobaDiscordBot
 {
     internal class SlashCommands : ApplicationCommandModule
     {
-        [SlashCommand("test", "Just test command")]
-        public async Task TestCommand(InteractionContext ctx)
-        {
-            await ctx.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new DiscordInteractionResponseBuilder().WithContent("Success!"));
-        }
-
         [SlashCommand("BalabobIt", "Balabob something")]
         public async Task BalabobIt(InteractionContext ctx, [Option("Style", "Style of Balabobing")] CategoriesEnum categoriesEnum, [Option("text", "Write something and Balaboba will continue")] string text)
         {
