@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace BalabobaDiscordBot
+namespace BalabobaDiscordBot.Api
 {
     public struct BalabobaRequestResult
     {

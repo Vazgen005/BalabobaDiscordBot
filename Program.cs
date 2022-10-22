@@ -27,8 +27,8 @@ namespace BalabobaDiscordBot
             var client = new DiscordClient(new DiscordConfiguration()
             {
                 Token = token,
-                TokenType = TokenType.Bot,
-                AutoReconnect = true
+                AutoReconnect = true,
+                TokenType = TokenType.Bot
             });
 
             var commands = client.UseSlashCommands();
