@@ -26,7 +26,12 @@ namespace BalabobaDiscordBot
                     ));
                 return;
             }
-            if (data.Error == 1)
+            if (data.EmptyZeliboba <= 1)
+            {
+                await ctx.EditResponseAsync(new DiscordWebhookBuilder().WithContent("Sorry, Balaboba can’t come up with a text."));
+                return;
+            }
+            if (data.Error == 1 || data.Text == "")
             {
                 await ctx.EditResponseAsync(new DiscordWebhookBuilder().WithContent("Unknown error."));
                 return;
