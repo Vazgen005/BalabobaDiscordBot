@@ -26,7 +26,7 @@ namespace BalabobaDiscordBot
                     ));
                 return;
             }
-            if (data.EmptyZeliboba <= 1)
+            if (data.EmptyZeliboba >= 1)
             {
                 await ctx.EditResponseAsync(new DiscordWebhookBuilder().WithContent("Sorry, Balaboba can’t come up with a text."));
                 return;
