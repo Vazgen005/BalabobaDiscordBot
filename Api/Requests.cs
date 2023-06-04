@@ -16,7 +16,6 @@ namespace BalabobaDiscordBot.Api
 
         public static async Task<BalabobaRequestResult> GetBalabobaString(string query, int filter = 1, long intro = 0)
         {
-
             var data = JsonConvert.SerializeObject(new Dictionary<string, dynamic>
             {
                 { "filter", filter },
